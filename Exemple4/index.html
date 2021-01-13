@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .maclasse {
+        width: 200px;
+        height: 60px;
+        background-color: #ee6600;
+        margin: 10px;
+        font: 14pt verdana;
+        padding: 10px;
+        color: #fff;
+      }
+    </style>
+    <script>
+      function afficher() {
+        alert("Bonjour");
+      }
+      function ajouter() {
+        baliseDiv = document.createElement("div");
+        baliseDiv.className = "maclasse";
+        message = document.createTextNode("Bonjour à tous!");
+        baliseDiv.appendChild(message);
+        document.getElementById("madiv").appendChild(baliseDiv);
+        baliseDiv.addEventListener("mouseover", afficher, false);
+      }
+    </script>
+  </head>
+  <body onload="">
+    <input type="button" value="Ajouter une Div" onclick="ajouter()" />
+    <div id="madiv"></div>
+  </body>
+</html>
