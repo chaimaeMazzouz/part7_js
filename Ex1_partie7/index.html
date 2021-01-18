@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script langauge="javascript">
+      function ChangeColor() {
+        var colorTxt = document.getElementById("colortext").value;
+        document.getElementById("text").style.color = colorTxt;
+      }
+      function changeBackground() {
+        var colorFond = document.getElementById("colorfond").value;
+        document.bgColor = colorFond;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="text">Bonjour!</h1>
+    <form>
+      <input type="text" id="colortext" />
+      <input type="button" value="Couleur du texte" onclick="ChangeColor()" />
+      <br />
+      <input type="text" id="colorfond" />
+      <input
+        type="button"
+        value="Couleur du fond"
+        onclick="changeBackground()"
+      />
+    </form>
+  </body>
+</html>
